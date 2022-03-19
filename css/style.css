@@ -10,8 +10,9 @@
 }
 html {
     font-family: 'Open Sans', sans-serif;
-    /*font-family: 'Raleway', sans-serif;*/
-    height: 300vh;
+    overflow-x:hidden ;
+
+
 }
 .clearfix::after {
     content: "";
@@ -30,13 +31,13 @@ html {
 .header-page {
     width: 100vw;
     background-color: var(--color-white-1);
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 0 3px 6px #00000029;
 
 }
 .container {
     display: flex;
     justify-content: center;
-    max-width: 1352px;
+    max-width: 1350px;
     margin: 0 auto;
 }
 .nav-name-page {
@@ -47,7 +48,7 @@ html {
 
 }
 .best-shop{
-    padding: 18.5px;
+    padding: 1.15625rem;
 }
 .nav-menu-header{
     display: flex;
@@ -189,10 +190,14 @@ li a:hover {
 
 }
 .img-iphone{
-
-    padding: 110px 0px 40px 80px;
-    background-color: lightseagreen;
-
+    padding: 110px 0 40px 80px;
+    /*background-color: lightseagreen;*/
+}
+.img-iphone::before{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
 }
 
 .img-benefits{
@@ -201,7 +206,7 @@ li a:hover {
 }
 .main-text-benefits{
     padding-bottom: 20px;
-    font-family: Raleway;
+    font-family: "Raleway", sans-serif;
     font-size: 36px;
     line-height: 42px;
     max-width: 250px;
@@ -225,4 +230,260 @@ li a:hover {
     padding-bottom: 40px;
     border-bottom: 5px solid #55DFB4;
     max-width: 300px;
+}
+.pricing-main-h2{
+    font-size: 36px;
+    font-family: Raleway, sans-serif;
+    line-height: 42px;
+}
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.pricing__box {
+    width: 370px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #55DFB4;
+}
+.pricing__details {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pricing__type {
+    font-size: 1.25rem;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+}
+
+.pricing__price {
+    font-size: 2.875rem;
+    font-family: Open Sans, sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    color: var(--accent-color);
+}
+
+.pricing__limited {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+}
+.pricing__items {
+    text-align: center;
+}
+
+.pricing__item {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.pricing__item::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../assets/Checkmark-1.svg");
+}
+
+.pricing__item--not::before {
+    background-image: url("../assets/Close.svg");
+}
+.pricing__box--basic {
+    --accent-color: var(--color-redish);
+}
+
+.pricing__box--basic .pricing__price {
+    margin-bottom: 30px;
+}
+.pricing__box--professional {
+    --accent-color: var(--color-primary);
+    width: 400px;
+    margin: 0 40px;
+    box-shadow: 5px 1px 27px var(--color-primary-shadow);
+}
+
+.pricing__box--professional .pricing__type {
+    font-size: 1.3125rem;
+}
+
+.pricing__box--professional .pricing__item {
+    margin-bottom: 25px;
+}
+.pricing__box--premium {
+    --accent-color: var(--color-green);
+}
+.pricing__box .btn {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 41px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+    bottom: -25px;
+}
+.btn-basic{
+    background-color: #EB476E;
+}
+.btn--primary{
+    background-color: #07ACE6;
+}
+.btn-premium{
+    background-color: #55DFB4;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-contact{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    padding-top: 130px;
+}
+.form-contact{
+    width: 450px;
+}
+.column-text{
+    display:block;
+    width: 450px;
+
+}
+.text-contact{
+    font-size: 49px;
+    line-height: 57px;
+    font-family: Raleway,sans-serif;
+}
+.text-under-contact{
+    padding-top: 22px;
+    line-height: 22px;
+    font-family: "Open Sans",sans-serif;
+}
+.info-text{
+    color: #A5A5A5;
+    text-decoration: none;
+    display: inline-block;
+    padding: 42px 20px 0 0 ;
+}
+.number-text{
+    text-decoration: none;
+    color: #A5A5A5;
+}
+.contact-text{
+    width: 450px;
+    margin-left: 20px;
+
+}
+.contact-name{
+    color: #08A6E4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 15px;
+    font-family: Open Sans,sans-serif;
+}
+.input-contact-name{
+    width: 440px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black  ;
+}
+.form-checkbox-column{
+    padding-top: 30px;
+
+}
+.form-email-column{
+    padding-top: 25px;
+}
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #eee;
+    outline: none;
+    position: relative;
+}
+.checkbox:checked{
+    background: tomato;
+}
+.checkbox:checked::after{
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.text-checkbox{
+    text-align: justify;
+    font-size: 12px;
+    line-height: 17px;
+    font-family: Open Sans, sans-serif;
+    color: #707070;
+    float: right;
+    width: 400px;
+    height: 100px;
+    padding-bottom: 15px;
+}
+.button-contact{
+    float: right;
+    width: 220px;
+    height: 55px;
+    color: white;
+    font-weight: bold;
+    background-color: #08A6E4;
+    border: none;
+    border-radius: 35px;
+}
+.footer-head{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    box-shadow: 0 -5px 40px  #00000029;
+
+}
+.logo-text{
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    font-family: Raleway,sans-serif;
+    color: #08A6E4;
+}
+.twitter{
+    margin:10px ;
+}
+.text-under-logo{
+    font-size: 11px;
+    line-height: 15px;
+    font-family: Open Sans, sans-serif;
+    color: #A5A5A5;
 }
